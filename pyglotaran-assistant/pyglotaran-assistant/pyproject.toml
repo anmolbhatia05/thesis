@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling>=1.4.0", "jupyterlab~=4.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pyglotaran_assistant"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+classifiers = [
+    "Framework :: Jupyter",
+    "Framework :: Jupyter :: JupyterLab",
+    "Framework :: Jupyter :: JupyterLab :: 4",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+version = "0.1.0"
+description = "A Jupyter AI extension."
+authors = [
+    { name = "Anmol Bhatia", email = "anmolbhatia05@gmail.com" },
+]
+dependencies = ["jupyter_ai"]
+
+[project.optional-dependencies]
+test = ["coverage", "pytest", "pytest-asyncio", "pytest-cov"]
+
+[project.entry-points."jupyter_ai.model_providers"]
+test-provider = "pyglotaran_assistant.provider:TestProvider"
+
+[project.entry-points."jupyter_ai.chat_handlers"]
+observe-slash-command = "pyglotaran_assistant.slash_command:ObserveSlashCommand"
+
+[tool.hatch.build.hooks.version]
+path = "pyglotaran_assistant/_version.py"
+
+[tool.check-wheel-contents]
+ignore = ["W002"]

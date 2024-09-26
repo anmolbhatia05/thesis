@@ -1,0 +1,6 @@
+rates:
+  - ["species_1", 0.044]
+  - ["species_2", 0.004]
+irf:
+  - ["width", 1]
+  - ["center", 3]

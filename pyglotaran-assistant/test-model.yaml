@@ -1,0 +1,48 @@
+dataset:
+  dataset_1:
+    force_index_dependent: false
+    global_megacomplex:
+    - megacomplex_spectral
+    group: default
+    label: dataset_1
+    megacomplex:
+    - megacomplex_parallel_decay
+    spectral_axis_inverted: true
+    spectral_axis_scale: 10000000.0
+dataset_groups:
+  default:
+    label: default
+    residual_function: variable_projection
+megacomplex:
+  megacomplex_parallel_decay:
+    compartments:
+    - species_1
+    - species_2
+    dimension: time
+    label: megacomplex_parallel_decay
+    rates:
+    - rates.species_1
+    - rates.species_2
+    type: decay-parallel
+  megacomplex_spectral:
+    dimension: spectral
+    label: megacomplex_spectral
+    shape:
+      species_1: shape_species_1
+      species_2: shape_species_2
+    type: spectral
+shape:
+  shape_species_1:
+    amplitude: shapes.species_1.amplitude
+    label: shape_species_1
+    location: shapes.species_1.location
+    skewness: shapes.species_1.skewness
+    type: skewed-gaussian
+    width: shapes.species_1.width
+  shape_species_2:
+    amplitude: shapes.species_2.amplitude
+    label: shape_species_2
+    location: shapes.species_2.location
+    skewness: shapes.species_2.skewness
+    type: skewed-gaussian
+    width: shapes.species_2.width

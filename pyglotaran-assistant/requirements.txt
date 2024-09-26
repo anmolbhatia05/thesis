@@ -1,0 +1,8 @@
+pyautogen
+chromadb==0.4.24
+jupyterlab
+jupyter-ai
+openai
+
+# Optional dependencies
+pyautogen[retrievechat]

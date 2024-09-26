@@ -1,0 +1,11 @@
+label,value,standard_error,expression,maximum,minimum,non_negative,vary
+rates.species_2,0.005,None,None,,,False,True
+shapes.species_2.amplitude,1.0,None,None,,,False,True
+shapes.species_2.location,23000.0,None,None,,,False,True
+shapes.species_1.location,22000.0,None,None,,,False,True
+shapes.species_2.skewness,-0.1,None,None,,,False,True
+shapes.species_1.skewness,0.1,None,None,,,False,True
+shapes.species_1.amplitude,1.0,None,None,,,False,True
+rates.species_1,0.05,None,None,,,False,True
+shapes.species_1.width,3500.0,None,None,,,False,True
+shapes.species_2.width,3500.0,None,None,,,False,True

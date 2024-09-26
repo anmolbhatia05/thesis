@@ -1,0 +1,33 @@
+dataset:
+  dataset_1:
+    group: default
+    label: dataset_1
+    irf: gaussian_irf
+    megacomplex:
+      - megacomplex_parallel_decay
+
+dataset_groups:
+  default:
+    label: default
+    residual_function: variable_projection
+
+megacomplex:
+  megacomplex_parallel_decay:
+    compartments:
+      - species_1
+      - species2
+    dimension: time
+    label: megacomplex_parallel_decay
+    rates:
+      - rates.species_1
+      - rates.species_2
+    type: decay-parallel
+
+irf:
+  gaussian_irf:
+    backsweep: false
+    center: irf.center
+    label: gaussian_irf
+    normalize: true
+    type: gaussian
+    width: irf.width
