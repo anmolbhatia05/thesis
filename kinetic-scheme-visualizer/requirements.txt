@@ -1,0 +1,8 @@
+# runtime requirements
+# pinned so the bot can create PRs to test with new versions
+
+anywidget==0.9.13
+pydantic==2.7.1
+pyglotaran==0.7.2
+networkx==3.3
+xarray==2024.6.0
